@@ -1,0 +1,165 @@
+@import '../config'
+
+.parent
+	position relative
+	margin 16px
+
+	label
+		font-size 1rem
+		font-weight 600
+		color black
+		display inline-block
+		margin-bottom .5rem
+		transition all $transition
+		position absolute
+		top 16px
+		pointer-events none
+		left 16px
+
+	svg
+		position absolute
+		color #AAA
+		top 14px
+		left 16px // input padding-left
+		transition color $transition
+
+		~ label
+			left 16px + 24px + 16px
+
+	select
+		appearance none
+
+	input
+	select
+		padding 14px 16px
+		max-width 100%
+		height 56px
+		border 2px solid rgba(black, .3)
+		border-radius 4px
+		box-sizing border-box
+		font-size .875rem
+		outline none
+		background transparent
+		transition all $transition
+		color black
+		&:hover
+			border-color black
+
+			+ svg
+				color black
+
+		&:not(:placeholder-shown)
+		&:focus
+		&:not([placeholder=" "])
+			~ label
+				top -8px
+				left 16px - 4px // .input/padding-left label/padding-left
+				background white
+				padding 0 4px
+
+		&:invalid
+			border-color $danger
+
+			~ label
+				color @border-color
+
+			~ svg
+				color @border-color
+		&:focus
+			border-color $default
+
+			~ label
+				color @border-color
+
+			~ svg
+				color @border-color
+
+			&.primary
+				border-color $primary
+
+				~ label
+					color @border-color
+
+				~ svg
+					color @border-color
+
+			&.secondary
+				border-color $secondary
+
+				~ label
+					color @border-color
+
+				~ svg
+					color @border-color
+
+			&.info
+				border-color $info
+
+				~ label
+					color @border-color
+
+				~ svg
+					color @border-color
+
+			&.success
+				border-color $success
+
+				~ label
+					color @border-color
+
+				~ svg
+					color @border-color
+
+			&.danger
+				border-color $danger
+
+				~ label
+					color @border-color
+
+				~ svg
+					color @border-color
+
+			&.warning
+				border-color $warning
+
+				~ label
+					color @border-color
+
+				~ svg
+					color @border-color
+
+		&.hasIcon
+			padding-left 16px + 24px + 16px
+
+		&.filled
+			border none
+			background rgba(gray, .1)
+			border-radius @border-radius @border-radius 0 0
+			border-bottom 2px solid rgba(black,.4)
+
+			&:hover
+				background rgba(gray, .2)
+
+			&:focus
+				background rgba(gray, .3)
+
+			&:not(:placeholder-shown)
+			&:focus
+			&:not([placeholder=" "])
+				~ label
+					top 3px
+					left 16px - 4px // .input/padding-left label/padding-left
+					background transparent
+					padding 0
+					font-size .75rem
+				~ svg ~ label
+					left 16px + 24px + 16px // .input/padding-left label/padding-left
+
+	div
+		display flex
+		justify-content space-between
+		padding 0 16px
+		font-size .9em
+
+	&.block input
+		width 100%

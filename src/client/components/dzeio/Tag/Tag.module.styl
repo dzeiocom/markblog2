@@ -1,0 +1,137 @@
+@import '../config'
+
+.tag
+	padding 8px 12px
+	border-radius 8px
+	margin-left 8px
+	height 32px
+	line-height 1
+
+	background #EEE
+	outline none
+	&:hover
+		background darken(#EEE, 10%)
+	&:focus
+		background darken(#EEE, 20%)
+
+.outline
+	border 2px solid #AAA
+	padding 6px 10px
+	background transparent
+	&:hover
+		background rgba(#AAA, .5)
+	&:focus
+		background rgba(#AAA, .7)
+
+.primary
+	$color = $primary
+	color white
+	background $color
+	&:hover
+		background lighten($color, 30%)
+	&:focus
+		background lighten($color, 15%)
+
+	&.outline
+		color black
+		border 2px solid $color
+		background transparent
+		&:hover
+			color white
+			background rgba($color, .5)
+		&:focus
+			color white
+			background rgba($color, .7)
+.secondary
+	$color = $secondary
+	background $color
+	&:hover
+		background lighten($color, 30%)
+	&:focus
+		background lighten($color, 15%)
+	&.outline
+		color white
+		border 2px solid $color
+		background transparent
+		&:hover
+			color black
+			background rgba($color, .5)
+		&:focus
+			color black
+			background rgba($color, .7)
+
+.info
+	$color = $info
+	color white
+	background $color
+	&:hover
+		background lighten($color, 30%)
+	&:focus
+		background lighten($color, 15%)
+	&.outline
+		color black
+		border 2px solid $color
+		background transparent
+		&:hover
+			color white
+			background rgba($color, .5)
+		&:focus
+			color white
+			background rgba($color, .7)
+
+.success
+	$color = $success
+	color white
+	background $color
+	&:hover
+		background lighten($color, 30%)
+	&:focus
+		background lighten($color, 15%)
+	&.outline
+		color black
+		border 2px solid $color
+		background transparent
+		&:hover
+			color white
+			background rgba($color, .5)
+		&:focus
+			color white
+			background rgba($color, .7)
+
+.danger
+	$color = $danger
+	color white
+	background $color
+	&:hover
+		background lighten($color, 30%)
+	&:focus
+		background lighten($color, 15%)
+	&.outline
+		color black
+		border 2px solid $color
+		background transparent
+		&:hover
+			color white
+			background rgba($color, .5)
+		&:focus
+			color white
+			background rgba($color, .7)
+
+.warning
+	$color = $warning
+	color white
+	background $color
+	&:hover
+		background lighten($color, 30%)
+	&:focus
+		background lighten($color, 15%)
+	&.outline
+		color black
+		border 2px solid $color
+		background transparent
+		&:hover
+			color white
+			background rgba($color, .5)
+		&:focus
+			color white
+			background rgba($color, .7)

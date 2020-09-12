@@ -1,0 +1,9 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`render a h1 1`] = `
+<h1
+  className="jsx-3954099876"
+>
+  Test
+</h1>
+`;

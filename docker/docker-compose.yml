@@ -1,0 +1,28 @@
+version: "3"
+services:
+  tcgdex:
+    build:
+      context: ../
+      dockerfile: Dockerfile
+    networks:
+      - network
+    depends_on:
+      - db
+    env_file:
+      - .env
+      - .env.local
+
+  db:
+    image: mysql
+    command: --default-authentication-plugin=mysql_native_password
+    env_file:
+      - .env
+      - .env.local
+    networks:
+      - network
+    volumes:
+      - ./.storage/mysql/:/var/lib/mysql
+
+networks:
+  network:
+    external: false

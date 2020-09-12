@@ -1,0 +1,60 @@
+{
+	"sitemap": {
+		"enabled": false,
+		"outputPath": "./out/sitemap.xml",
+		"config": {
+			"hostname": "https://www.example.com",
+			"lastmodDateOnly": false,
+			"xmlns": {
+				"news": false,
+				"xhtml": false,
+				"image": false,
+				"video": false
+			}
+		},
+		"customRoutes": [
+			{
+				"url": "/",
+				"changefreq": "weekly",
+				"priority": 1.0
+			}
+		]
+	},
+	"favicons": {
+		"enabled": false,
+		"sourceFile":"./public/assets/logo.svg",
+		"assetsOutput": "./public/",
+		"tsxOutput": "./src/client/components/Favicons.tsx",
+		"config": {
+			"path": "/",
+			"appName": "Next Template",
+			"appShortName": "Next Template",
+			"appDescription": "Next Template",
+			"developerName": null,
+			"developerURL": null,
+			"dir": "auto",
+			"lang": "en-US",
+			"background": "#fff",
+			"theme_color": "#123456",
+			"appleStatusBarStyle": "black-translucent",
+			"display": "standalone",
+			"orientation": "any",
+			"scope": "/",
+			"start_url": "/",
+			"version": "package.json",
+			"logging": false,
+			"pixel_art": false,
+			"loadManifestWithCredentials": false,
+			"icons": {
+				"android": true,
+				"appleIcon": true,
+				"appleStartup": true,
+				"coast": true,
+				"favicons": true,
+				"firefox": true,
+				"windows": true,
+				"yandex": true
+			}
+		}
+	}
+}

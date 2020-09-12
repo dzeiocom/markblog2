@@ -1,0 +1,48 @@
+@import "../config"
+
+
+
+.col
+	max-width 100%
+	flex-basis 0
+	flex-grow 1
+	padding $gapSize 0 0 $gapSize
+
+	&.nogrow
+		max-width intial
+		flex-grow 0
+		flex-basis initial
+
+for i in (1...$colCount+1)
+	.col-{i}
+		flex 0 0 ((i / 12) * 100)%
+		min-width ((i / 12) * 100)%
+
+	if i != $colCount
+		.offset-{i}
+			margin-left ((i / 12) * 100)% + (i * $gapSize + $gapSize)
+
+@media (max-width $tablet)
+	.col.tabletGrow
+		flex-grow 1
+
+	for i in (1...$colCountTablet+1)
+		.col-tablet-{i}
+			flex 0 0 ((i / $colCountTablet) * 100)%
+			min-width ((i / $colCountTablet) * 100)%
+
+		if i != $colCountTablet
+			.offset-tablet-{i}
+				margin-left ((i / $colCountTablet) * 100)% + (i * $gapSize - $gapSize)
+
+@media (max-width $mobile)
+	.col.mobileGrow
+		flex-grow 1
+
+	for i in (1...$colCountMobile+1)
+		.col-mobile-{i}
+			flex 0 0 ((i / $colCountMobile) * 100)%
+			min-width ((i / $colCountMobile) * 100)%
+		if i != $colCountMobile
+			.offset-tablet-{i}
+				margin-left ((i / $colCountMobile) * 100)% + (i * $gapSize - $gapSize)
